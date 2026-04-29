@@ -1,3 +1,1 @@
-Comp484 Project 2 - Giga Pet
-
-https://framez00.github.io/Comp484-Project2/
+Comp484 HW10 Giga Pet
