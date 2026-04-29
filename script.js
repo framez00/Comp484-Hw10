@@ -1,3 +1,4 @@
+
 $(function() { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
     
     // Called function to update the name, happiness, and weight of our pet in our HTML
@@ -18,6 +19,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     var pet_info = {name:"Foxy", weight:50, happiness:50};
   
     function clickedTreatButton() {
+      //Log info
+      console.info("Log Info: Foxy got a treat.");
       // Increase pet happiness
       pet_info.happiness += 5;
       // Increase pet weight
@@ -28,6 +31,13 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     }
     
     function clickedPlayButton() {
+      // Log Table
+      console.table([
+        {
+          Weight: pet_info.weight,
+          Happiness: pet_info.happiness
+        }
+      ])
       // Increase pet happiness
       pet_info.happiness += 5;
       // Decrease pet weight
@@ -38,6 +48,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     }
     
     function clickedExerciseButton() {
+      //Log warning
+      console.warn("Don't let his happiness drop belo 20, he will get mad!");
       // Decrease pet happiness
       pet_info.happiness -= 5;
       // Decrease pet weight
@@ -48,6 +60,16 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     }
 
     function clickedSleepButton() {
+      // Log group
+      const label = 'Sleep';
+      console.group(label);
+      console.info("Foxy is sleeping");
+      console.info("Happiness increasing");
+      console.info("Weight decreasing");
+      console.groupEnd(label);
+      // Log custom
+      const styles = "color: #ff0000; font-size: 16px; font-weight: bold; background-color: #000000;"
+      console.log("%cPet went to sleep!", styles);
       // Increase pet happiness
       pet_info.happiness += 5;
       // Decrease pet weight
@@ -76,6 +98,8 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     function updatePetInfoInHtml() {
       // .attr() to change the attribute of an element/image source of depending on pets happiness
       if(pet_info.happiness < 20){
+        //Log error
+        console.error("Log error. Foxy is pissed.");
         if ($(".pet-image").attr("src") !== "images/foxyMad.jpg") {
           $(".pet-image").attr("src", "images/foxyMad.jpg");
           showOverlayMessage("I'M PISSED");
