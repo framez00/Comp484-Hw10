@@ -1,0 +1,145 @@
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: helvetica, arial, sans-serif;
+    margin: 25px;
+  }
+  
+  main {
+    display:block;
+    height:175px;
+  }
+  
+  header {
+    border-bottom: 1px solid black;
+  }
+  
+  h1 {
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  p {
+    max-width: 600px;
+  }
+  
+  
+  li {
+    margin-bottom: 5px;
+  }
+  
+  footer {
+    padding-top: 25px;
+    border-top: 1px solid black;
+  }
+  
+  footer a {
+    float:left;
+    margin:5px;
+  }
+  
+  .pet-image {
+    height:250px;
+  }
+  
+  .dashboard div {
+    display:block;
+  }
+  
+  .pet-image-container {
+    float:left;
+    padding:10px;
+  }
+  
+  .dashboard {
+    float:left;
+    padding:20px;
+  }
+  
+  .button-container {
+    margin-top:20px;
+  }
+  
+  .button-container button {
+    width: 100px;
+      margin-right: 10px;
+      text-align: center;
+      display: inline-block;
+      float: left;
+    font-size:15px;
+    background-color: #1e2835;
+    border-color: #404853;
+    cursor:pointer;
+    background-image: linear-gradient(to bottom,rgba(246,246,246,.1)0%,rgba(30,40,53,0)66%);
+    color: #fafafa;
+    border-radius: 5px; /*add border radius*/
+    padding: 5px;/*add padding*/
+  }
+  /*add hover*/
+  .button-container button:hover {
+    background-color: #2f3b4a;
+  }
+
+  .overlay-message {
+    position: fixed; /*message stays in a fixed spot*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /*centers elements*/
+    font-size: 60px;
+    font-weight: bold;
+    color: red;
+    text-shadow: /*gives a shadow with the following colors, glitch feeling*/
+      3px 3px red, /*3px right and down*/
+      -3px -3px cyan; /*3px left and up*/
+  }
+
+  /*center properties*/
+  body {
+    height: 100vh; /*fits background image over the whole screen*/
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url("images/background.jpg");
+    background-size: cover; /*chooses the entire picture to be background*/
+    background-position: center; /*centers thebackground*/
+    background-repeat: no-repeat; /*doesnt repeat the image*/
+  }
+
+  .card {
+    width: 600px;
+    margin: 50px auto;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+
+  main {
+    display: flex;/*lays content in front*/
+    align-items: center; /*centers contents of the card*/
+  }
+
+  .pet-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /*changes the pic to horizontal to match angry foxy*/
+  }
+  
+  .pet-image-container {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+  }
+ 
+  h1{
+    color: #fafafa;
+    text-align: center;
+  }
