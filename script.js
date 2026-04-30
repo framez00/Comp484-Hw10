@@ -1,3 +1,4 @@
+fetch('/file');
 
 $(function() { // Makes sure that your function is called once all the DOM elements of the page are ready to be used.
     
@@ -38,6 +39,9 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
           Happiness: pet_info.happiness
         }
       ])
+      // Cause TypeError
+      let name = pet_info.name;
+      name();
       // Increase pet happiness
       pet_info.happiness += 5;
       // Decrease pet weight
@@ -48,8 +52,15 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
     }
     
     function clickedExerciseButton() {
+      // Cause Violation
+      const duration = 3000;
+      const start = new Date().getTime();
+
+      while (new Date().getTime() < start + duration) {
+        // Block main thread for 3 seconds
+      }
       //Log warning
-      console.warn("Don't let his happiness drop belo 20, he will get mad!");
+      console.warn("Don't let his happiness drop below 20, he will get mad!");
       // Decrease pet happiness
       pet_info.happiness -= 5;
       // Decrease pet weight
