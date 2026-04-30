@@ -15,7 +15,7 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
   
     
   })
-  
+
     // Add a variable "pet_info" equal to a object with the name (string), weight (number), and happiness (number) of your pet
     var pet_info = {name:"Foxy", weight:50, happiness:50};
   
@@ -141,4 +141,4 @@ $(function() { // Makes sure that your function is called once all the DOM eleme
         .delay(1000) //delays the fade out 1s
         .fadeOut(1000); //fades out 1s
     }
-  
+  //done
